@@ -13,6 +13,29 @@ body{margin:0}
 a{color:inherit}
 a:hover{opacity:.75}
 section{scroll-margin-top:72px}
+.gradient-sweep{
+  background-image:linear-gradient(90deg,#C6F432 0%,#7CE0C3 14%,#5CC8FF 28%,#A78BFA 42%,#FF4FD8 56%,#FF6B6B 70%,#FF8C42 84%,#FFB020 100%);
+  background-size:280% 100%;
+  background-position:0% center;
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color:transparent;
+  display:inline-block;
+  padding-inline-end:0.1em;
+  margin-inline-end:-0.1em;
+  padding-block-end:0.1em;
+  -webkit-box-decoration-break:clone;
+  box-decoration-break:clone;
+  animation:gradient-sweep 9s ease-in-out infinite;
+}
+@keyframes gradient-sweep{
+  0%,100%{background-position:0% center}
+  50%{background-position:100% center}
+}
+@media (prefers-reduced-motion:reduce){
+  .gradient-sweep{animation:none}
+}
 html{scroll-behavior:smooth}
 </style>
 </head>
@@ -36,7 +59,7 @@ html{scroll-behavior:smooth}
 <div id="top" style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 48px; padding: 72px 0 96px">
 <div style="flex: 1 1 520px; min-width: 0">
 <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #C6F432">SUPPLY CHAIN · FREIGHT &amp; PROCUREMENT ANALYTICS · LOUISVILLE, KY</div>
-<h1 style="margin: 20px 0 24px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: clamp(40px, 7vw, 84px); line-height: 1.02; letter-spacing: -0.02em">Cost and market data, turned into <span style="color: #C6F432">decisions.</span></h1>
+<h1 style="margin: 20px 0 24px; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: clamp(40px, 7vw, 84px); line-height: 1.02; letter-spacing: -0.02em">Cost and market data, turned into <span class="gradient-sweep">decisions.</span></h1>
 <p style="margin: 0 0 36px; max-width: 560px; font-size: 19px; color: #C9D6D1">I'm Ganga, a Procurement Analytics Manager at RSCS. I build the cost outlook, model net impact across total store landed cost, and automate the busywork around supplier data so the team can focus on the calls that matter.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 16px">
 <a href="#contact" style="display: inline-block; box-sizing: border-box; min-height: 48px; padding: 12px 24px; background: #C6F432; color: #0F2A24; font-weight: 500; text-decoration: none; border-radius: 4px">Get in touch</a>
